@@ -9,32 +9,40 @@
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="Javascript.css">
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
     </head>
     <body>
-      <p>
-
-      </p>
+      <div class="container">
+      <table>
+        <thead>
+        <tr>
+          <th> Name </th>
+          <th> Phone</th>
+          <th> Vehicle </th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+      </table>
+    </div>
       <script>
 
-    var keyValuePair1 = {"name": "Jd Warren", "phone" :"Android" "Vehicle": "car",}
-    var keyValuePair2 = {"name": "Mason Moore", "phone" :"Iphone", "Vehicle": "car",}
-    var keyValuePair3 = {"name": "Connor Kennedy", "phone": "Android", "Vehicle": "car",}
-    var keyValuePair4 = {"name": "Jacob King", "phone": "Iphone", "Vehicle": "car",}
-    var keyValuePair5 = {"name": "Colby Moore", "phone": "Iphone", "Vehicle": "car",}
+    var keyValuePair1 = {"name": "Jd Warren", "phone": "Android", "Vehicle": "car"};
+    var keyValuePair2 = {"name": "Mason Moore", "phone": "Iphone", "Vehicle": "car"};
+    var keyValuePair3 = {"name": "Connor Kennedy", "phone": "Android", "Vehicle": "car"};
+    var keyValuePair4 = {"name": "Jacob King", "phone": "Iphone", "Vehicle": "car"};
+    var keyValuePair5 = {"name": "Colby Moore", "phone": "Iphone", "Vehicle": "car"};
     var mySuperSweetArray = [keyValuePair1, keyValuePair2, keyValuePair3, keyValuePair4, keyValuePair5];
     $(document).ready(function(){
-      $.each(mySuperSweetArray, function(index, value) {
-        $(".container").prepend("<p>")
-        $(".container").append("<br>name: " + value.name);
-        $(".container").append("<br>phone: " + value.phone);
-        $(".container").append("<br>Vehicle: " + value.Vehicle);
-        $(".container").append("</p>")
+      $.each(mySuperSweetArray, function(index,value) {
+        $("tbody").append("<tr>");
+        $("tbody").append("<td>" + value.name + "</td>");
+        $("tbody").append("<td>" + value.phone + "</td>");
+        $("tbody").append("<td>" + value.Vehicle + "</td>");
+        $("tbody").append("</tr>");
+      });
   });
-  });
-
   </script>
     </body>
 </html>
