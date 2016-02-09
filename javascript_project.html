@@ -1,0 +1,40 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="Javascript.css">
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </head>
+    <body>
+      <p>
+
+      </p>
+      <script>
+
+    var keyValuePair1 = {"name": "Jd Warren", "phone" :"Android" "Vehicle": "car",}
+    var keyValuePair2 = {"name": "Mason Moore", "phone" :"Iphone", "Vehicle": "car",}
+    var keyValuePair3 = {"name": "Connor Kennedy", "phone": "Android", "Vehicle": "car",}
+    var keyValuePair4 = {"name": "Jacob King", "phone": "Iphone", "Vehicle": "car",}
+    var keyValuePair5 = {"name": "Colby Moore", "phone": "Iphone", "Vehicle": "car",}
+    var mySuperSweetArray = [keyValuePair1, keyValuePair2, keyValuePair3, keyValuePair4, keyValuePair5];
+    $(document).ready(function(){
+      $.each(mySuperSweetArray, function(index, value) {
+        $(".container").prepend("<p>")
+        $(".container").append("<br>name: " + value.name);
+        $(".container").append("<br>phone: " + value.phone);
+        $(".container").append("<br>Vehicle: " + value.Vehicle);
+        $(".container").append("</p>")
+  });
+  });
+
+  </script>
+    </body>
+</html>
